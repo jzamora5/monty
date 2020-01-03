@@ -140,13 +140,13 @@ A header file connecting all functions and global variables
 
 **Compilation:**
 
-In order to test the monty interpreted, you will need to open a terminal in a Linux distribution and go to the folder you just cloned from GitHub. In there, you will need to compile the program, which was tested in GNU GCC 5.5.0 with different error flags such as:
+In order to test the monty interpreter, you will need to open a terminal in a Linux distribution and go to the folder you just cloned from GitHub. In there, you will need to compile the program, which was tested in GNU GCC 5.5.0 with different error flags such as:
 
 > **-Wall:**  Enables all the warnings about constructions.
 > 
 > **-Wextra :**  Enables some extra warning flags that are not enabled by  **-Wall**.
 > 
-> **-Werror:**  Make all warnings into hard errors.
+> **-Werror:**  Makes all warnings into hard errors.
 > 
 > **-pedantic:**  Issue all the mandatory diagnostics listed in the C standard.
 
