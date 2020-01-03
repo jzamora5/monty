@@ -239,3 +239,18 @@ Ubuntu 14.04, Emacs, Vim, and C language.
 
 Jhoan Stiven Zamora Caicedo
 
+
+## bf Folder
+
+There is some extra files found in the bf folder. This files corresponding to different codes writte in Brainf*ck language.
+
+|File| Function |
+|--|--|
+| 1000-holberton.bf | Prints the word "Holberton" followed by a new line|
+| 1001-add.bf | Adds two 1 digit numbers provided by an user (the result must be < 10) |
+|1002-mul.bf | Multiplies two 1 digit numbers provided by an user (the result must be < 10) |
+| 1003-mul.bf | Multiplies two 1 digit numbers provided by an user |
+
+
+In order to run this files, a Brainf*ck interpreter must be used.
+
