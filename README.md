@@ -252,5 +252,5 @@ There is some extra files found in the bf folder. These files correspond to diff
 | 1003-mul.bf | Multiplies two 1 digit numbers provided by an user |
 
 
-In order to run this files, a Brainf*ck interpreter must be used.
+In order to run these files, a Brainf*ck interpreter must be used.
 
