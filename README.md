@@ -126,9 +126,10 @@ Functions for checking and executing byte codes
 
 Functions for handling doubly linked lists (for stacks and queues)
 
-> dll_funcs.c / checkInput.c / 
+> dll_funcs.c  
 
 Auxiliary Functions
+
 > aux_funcs1.c 
 
 A header file connecting all functions and global variables
