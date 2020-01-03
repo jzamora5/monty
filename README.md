@@ -242,7 +242,7 @@ Jhoan Stiven Zamora Caicedo
 
 ## bf Folder
 
-There is some extra files found in the bf folder. This files corresponding to different codes writte in Brainf*ck language.
+There is some extra files found in the bf folder. These files correspond to different codes written in Brainf*ck programming language.
 
 |File| Function |
 |--|--|
