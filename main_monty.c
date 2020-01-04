@@ -2,7 +2,6 @@
 
 global_m globm;
 void set_global(void);
-FILE *init_check(int ac, char *filename);
 
 /**
  * main -  monty interpreter
@@ -16,8 +15,19 @@ int main(int ac, char **av)
 	char *buff = NULL, *dlim = " \n\t";
 	size_t buff_size = 0;
 	ssize_t line_size;
+	FILE *fp;
 
-	globm.fp = init_check(ac, av[1]);
+	if (ac != 2)
+		dprintf(2, "USAGE: monty file\n"), exit(EXIT_FAILURE);
+
+	fp  = fopen(av[1], "r");
+	if (!fp)
+	{
+		dprintf(2, "Error: Can't open file %s\n", av[1]);
+		exit(EXIT_FAILURE);
+	}
+
+	globm.fp = fp;
 	set_global();
 	line_size = getline(&buff, &buff_size, globm.fp);
 	globm.gbuff = buff;
@@ -51,30 +61,4 @@ void set_global(void)
 	globm.n = NULL;
 	globm.head = NULL;
 	globm.line_number = 0;
-}
-/**
- * init_check - checks possible errors at the beginning
- * @ac: command line arguments count
- * @filename: path to monty file
- *
- * Return: File descriptor if no errors found
- * Error and Exit if:
- * User does not give any file or more than one argument
- * For any reason, it’s not possible to open the file
- */
-FILE *init_check(int ac, char *filename)
-{
-	FILE *fp;
-
-	if (ac != 2)
-		dprintf(2, "USAGE: monty file\n"), exit(EXIT_FAILURE);
-
-	fp  = fopen(filename, "r");
-	if (!fp)
-	{
-		dprintf(2, "Error: Can't open file %s\n", filename);
-		exit(EXIT_FAILURE);
-	}
-
-	return (fp);
 }
