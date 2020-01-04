@@ -117,7 +117,7 @@ void _mul(stack_t **stack, unsigned int line_number)
 		tmp = tmp->next, count++;
 	if (count < 2)
 	{
-		dprintf(2, "L%d: can't add, stack too short\n", line_number);
+		dprintf(2, "L%d: can't mul, stack too short\n", line_number);
 		exit_op();
 		exit(EXIT_FAILURE);
 	}
