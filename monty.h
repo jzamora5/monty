@@ -47,7 +47,6 @@ typedef struct instruction_s
 /**
  * struct global_var - contains global variables
  * @mode: 0 stack, 1 queue (default stack)
- * @opcode: current opcode;
  * @gbuff: getline buffer;
  * @n: argument of opcode (value of stack)
  * @head: head of stack
@@ -64,7 +63,6 @@ typedef struct global_var
 {
 	int mode;
 	char *gbuff;
-	char *opcode;
 	char *n;
 	stack_t *head;
 	unsigned int line_number;

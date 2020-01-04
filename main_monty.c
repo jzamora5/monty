@@ -12,7 +12,7 @@ void set_global(void);
  */
 int main(int ac, char **av)
 {
-	char *buff = NULL, *dlim = " \n\t";
+	char *buff = NULL, *dlim = " \n\t", *optok = NULL;
 	size_t buff_size = 0;
 	ssize_t line_size;
 	FILE *fp;
@@ -34,15 +34,15 @@ int main(int ac, char **av)
 	while (line_size >= 0)
 	{
 		globm.line_number += 1;
-		globm.opcode = strtok(buff, dlim);
+		optok = strtok(buff, dlim);
 
-		if (globm.opcode && globm.opcode[0] != '#')
+		if (optok && optok[0] != '#')
 		{
 			globm.n = strtok(NULL, dlim);
-			get_opcode(globm.opcode);
+			get_opcode(optok);
 		}
 		line_size = getline(&buff, &buff_size, globm.fp);
-		globm.opcode = NULL, globm.n = NULL;
+		optok = NULL, globm.n = NULL;
 	}
 	exit_op();
 	return (0);
@@ -57,7 +57,6 @@ void set_global(void)
 {
 	globm.mode = 0;
 	globm.gbuff = NULL;
-	globm.opcode = NULL;
 	globm.n = NULL;
 	globm.head = NULL;
 	globm.line_number = 0;
