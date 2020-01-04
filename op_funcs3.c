@@ -79,10 +79,10 @@ void _pstr(stack_t **stack, unsigned int line_number)
 	int chr;
 
 	(void) line_number;
-	while (stack && *stack)
+	while (stack && tmp)
 	{
 		chr = tmp->n;
-		if (chr < 1 || chr > 128)
+		if (chr < 1 || chr > 127)
 			break;
 		printf("%c", chr);
 		tmp = tmp->next;
